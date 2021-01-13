@@ -4,14 +4,14 @@ print(art.logo)
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 def caesarCipher(text, shift, direction):
-    if direction == 'd':
+    if direction == 'd': #decode
         shift = shift *(-1)
-    if shift > 25:
+    if shift > 25: #manage large shifts/keys
         shift %= 26
         
     finalText=""
     
-    for i in text:
+    for i in text: #process the cipher
         if i == ' ' or i.isdigit():
             finalText += i
             continue
